@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "../render";
+
 let state = {
   posts: [
     {
@@ -22,6 +24,25 @@ let state = {
       dates: "05.10.2021",
     },
   ],
+};
+
+export let newItem = (
+  ItemPostName,
+  ItemPostCreated,
+  ItemPostCategor,
+  ItemPostContest,
+  ItemPostDates
+) => {
+  let newTableItem = {
+    name: ItemPostName,
+    created: ItemPostCreated,
+    categor: ItemPostCategor,
+    contest: ItemPostContest,
+    dates: ItemPostDates,
+  };
+  state.posts.push(newTableItem);
+
+  rerenderEntireTree(state);
 };
 
 export default state;

@@ -11,18 +11,20 @@ function App(props) {
   let newContent = React.createRef();
   let newData = React.createRef();
 
-  let NewItem = () => {
+  let NewItemText = () => {
     let name = newName.current.value;
-    alert(name);
+
     let created = newCreated.current.value;
-    alert(created);
+    // props.newItem(created);
     let category = newCategory.current.value;
-    alert(category);
+    // props.newItem(category);
     let contest = newContent.current.value;
-    alert(contest);
+    // props.newItem(contest);
     let data = newData.current.value;
-    alert(data);
+    // props.newItem(data);
+    props.newItem(name, created, category, contest, data);
   };
+
   return (
     <div className="wrapper">
       <List posts={props.state.posts} />
@@ -33,7 +35,7 @@ function App(props) {
         newContent={newContent}
         newData={newData}
       />
-      <button onClick={NewItem} className="button_create">
+      <button onClick={NewItemText} className="button_create">
         New
       </button>
     </div>
