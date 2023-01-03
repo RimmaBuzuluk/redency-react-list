@@ -16,8 +16,14 @@ function List(props) {
             <th>Contest</th>
             <th>Dates</th>
             <th className="main__img">
-              <Button_ button_props="https://cdn-icons-png.flaticon.com/512/1732/1732309.png" />
-              <Button_ button_props="https://cdn-icons-png.flaticon.com/512/70/70757.png" />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1732/1732309.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/70/70757.png"
+                alt=""
+              />
             </th>
           </tr>
         </thead>

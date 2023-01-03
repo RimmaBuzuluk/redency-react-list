@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ArhiveTable from "./arhivTable";
 import Input_items from "./inputItems";
 
 import List from "./list";
@@ -38,6 +39,7 @@ function App(props) {
       <button onClick={NewItemText} className="button_create">
         New
       </button>
+      <ArhiveTable arhive={props.state.arhive} />
     </div>
   );
 }
