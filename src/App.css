@@ -1,9 +1,9 @@
-.A {
+.wrapper {
   width: 700px;
   margin-left: auto;
   margin-right: auto;
+  /* justify-content: center; */
 }
-
 table {
   width: 700px;
   margin-left: auto;
@@ -41,7 +41,26 @@ img {
 .button_create {
   width: 80px;
   height: 40px;
- 
-  margin-right: auto;
+}
 
+.input_table{
+  margin-top: 20px;
+}
+.table_input{
+margin: 5px 2px 5px 2px;
+}
+
+textarea{
+  width: 90px;
+  height: 20px;
+}
+
+.th_input{
+  height: 10px;
+
+}
+
+.th_input_button{
+  display: flex;
+  justify-content: center;
 }
