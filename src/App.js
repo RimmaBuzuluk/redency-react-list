@@ -25,7 +25,7 @@ function App(props) {
   };
   return (
     <div className="wrapper">
-      <List posts={props.posts} />
+      <List posts={props.state.posts} />
       <Input_items
         newNameFun={newName}
         newCreated={newCreated}

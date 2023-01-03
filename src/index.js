@@ -4,35 +4,12 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Button_ from "./button";
-
-let posts = [
-  {
-    name: "name_1",
-    created: 2015,
-    categor: "pink",
-    contest: "Task",
-    dates: "18.10.2022",
-  },
-  {
-    name: "name_1",
-    created: 2015,
-    categor: "pink",
-    contest: "Task",
-    dates: "18.10.2022",
-  },
-  {
-    name: "Name",
-    created: 2065,
-    categor: "blue",
-    contest: "Wark",
-    dates: "05.10.2021",
-  },
-];
+import state from "./redux/state";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App posts={posts} />
+    <App state={state} />
   </React.StrictMode>
 );
 
