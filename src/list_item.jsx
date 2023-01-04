@@ -12,7 +12,7 @@ function List_item(props) {
       <th className="content">{props.post.contest}</th>
       <th className="data">{props.post.dates}</th>
       <th className="main__img">
-        <BArhiv />
+        <BArhiv ArhivItem={props.ArhivItem} />
         <BDelete deleteItem={props.deleteItem} />
         <BRename />
       </th>

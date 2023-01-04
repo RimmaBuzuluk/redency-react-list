@@ -1,8 +1,8 @@
 import "./App.css";
 
-function BArhiv() {
+function BArhiv(props) {
   return (
-    <button className="btn_arh">
+    <button onClick={props.ArhivItem} className="btn_arh">
       <img
         src={"https://cdn-icons-png.flaticon.com/512/1732/1732309.png"}
         alt=""

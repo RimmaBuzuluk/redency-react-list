@@ -28,7 +28,11 @@ function App(props) {
 
   return (
     <div className="wrapper">
-      <List posts={props.state.posts} deleteItem={props.deleteItem} />
+      <List
+        posts={props.state.posts}
+        deleteItem={props.deleteItem}
+        ArhivItem={props.ArhivItem}
+      />
       <Input_items
         newNameFun={newName}
         newCreated={newCreated}

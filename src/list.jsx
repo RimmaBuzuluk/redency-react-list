@@ -29,7 +29,12 @@ function List(props) {
         </thead>
         <tbody id="tbody" className="inform">
           {props.posts.map((post, index) => (
-            <List_item post={post} key={index} deleteItem={props.deleteItem} />
+            <List_item
+              post={post}
+              key={index}
+              deleteItem={props.deleteItem}
+              ArhivItem={props.ArhivItem}
+            />
           ))}
         </tbody>
       </table>
