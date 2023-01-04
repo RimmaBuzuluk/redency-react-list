@@ -1,6 +1,6 @@
 import "./App.css";
 import ArhiveItems from "./arhiveItems";
-import Button_ from "./button";
+import Button_ from "./button_dalete";
 
 function ArhiveTable(props) {
   return (

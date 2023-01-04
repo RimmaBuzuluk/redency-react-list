@@ -28,7 +28,7 @@ function App(props) {
 
   return (
     <div className="wrapper">
-      <List posts={props.state.posts} />
+      <List posts={props.state.posts} deleteItem={props.deleteItem} />
       <Input_items
         newNameFun={newName}
         newCreated={newCreated}
@@ -36,9 +36,7 @@ function App(props) {
         newContent={newContent}
         newData={newData}
       />
-      <button onClick={NewItemText} className="button_create">
-        New
-      </button>
+      <button onClick={NewItemText} className="button_create"></button>
       <ArhiveTable arhive={props.state.arhive} />
     </div>
   );

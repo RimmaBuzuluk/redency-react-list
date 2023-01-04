@@ -1,5 +1,5 @@
 import "./App.css";
-import Button_ from "./button";
+// import Button_ from "./button_dalete";
 
 function ArhiveItems(props) {
   //     deleteItem=id=>{
@@ -15,7 +15,7 @@ function ArhiveItems(props) {
       <th className="content">{props.arhive.contest}</th>
       <th className="data">{props.arhive.dates}</th>
       <th className="main__img">
-        <Button_ button_props="https://cdn-icons-png.flaticon.com/512/13/13964.png" />
+        {/* <Button_ button_props="https://cdn-icons-png.flaticon.com/512/13/13964.png" /> */}
       </th>
     </tr>
   );

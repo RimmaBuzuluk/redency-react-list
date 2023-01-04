@@ -1,5 +1,5 @@
 import "./App.css";
-import Button_ from "./button";
+// import Button_ from "./button_dalete";
 
 function Input_items(props) {
   return (
@@ -41,9 +41,9 @@ function Input_items(props) {
             <textarea ref={props.newData}></textarea>
           </th>
           <th className="th_input_button">
-            <Button_ button_props="https://cdn-icons-png.flaticon.com/512/1732/1732309.png" />
+            {/* <Button_ button_props="https://cdn-icons-png.flaticon.com/512/1732/1732309.png" />
             <Button_ button_props="https://cdn-icons-png.flaticon.com/512/70/70757.png" />
-            <Button_ button_props="https://w7.pngwing.com/pngs/672/1022/png-transparent-writing-computer-icons-blog-write-miscellaneous-angle-text.png" />
+            <Button_ button_props="https://w7.pngwing.com/pngs/672/1022/png-transparent-writing-computer-icons-blog-write-miscellaneous-angle-text.png" /> */}
           </th>
         </tr>
       </tbody>

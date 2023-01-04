@@ -1,6 +1,6 @@
 import "./App.css";
 import "./list";
-import Button_ from "./button";
+import Button_ from "./button_dalete";
 import { useState } from "react";
 import List_item from "./list_item";
 
@@ -29,7 +29,7 @@ function List(props) {
         </thead>
         <tbody id="tbody" className="inform">
           {props.posts.map((post, index) => (
-            <List_item post={post} key={index} />
+            <List_item post={post} key={index} deleteItem={props.deleteItem} />
           ))}
         </tbody>
       </table>

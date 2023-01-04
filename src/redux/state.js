@@ -68,4 +68,12 @@ export let newItem = (
   rerenderEntireTree(state);
 };
 
+export let deleteItem = (e) => {
+  const currentButtonDel = e.currentTarget;
+  const div_elem = currentButtonDel.closest(".new_table");
+  const string_index = div_elem.rowIndex;
+  state.posts.splice(string_index - 1, 1);
+  currentButtonDel.closest(".new_table").remove();
+};
+
 export default state;

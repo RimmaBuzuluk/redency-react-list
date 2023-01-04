@@ -1,12 +1,9 @@
 import "./App.css";
-import Button_ from "./button";
+import BArhiv from "./bArhiv";
+import BDelete from "./bDelete";
+import BRename from "./bRename";
 
 function List_item(props) {
-  //     deleteItem=id=>{
-  //         this.setState(prevState=>({
-  //             elements:prevState.elements.filter(el=>el.id !=id)
-  //         }))
-  //     }
   return (
     <tr className="new_table">
       <th className="name">{props.post.name}</th>
@@ -15,9 +12,9 @@ function List_item(props) {
       <th className="content">{props.post.contest}</th>
       <th className="data">{props.post.dates}</th>
       <th className="main__img">
-        <Button_ button_props="https://cdn-icons-png.flaticon.com/512/1732/1732309.png" />
-        <Button_ button_props="https://cdn-icons-png.flaticon.com/512/70/70757.png" />
-        <Button_ button_props="https://w7.pngwing.com/pngs/672/1022/png-transparent-writing-computer-icons-blog-write-miscellaneous-angle-text.png" />
+        <BArhiv />
+        <BDelete deleteItem={props.deleteItem} />
+        <BRename />
       </th>
     </tr>
   );
