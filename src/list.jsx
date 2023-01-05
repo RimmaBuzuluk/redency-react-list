@@ -34,6 +34,7 @@ function List(props) {
               key={index}
               deleteItem={props.deleteItem}
               ArhivItem={props.ArhivItem}
+              numTask={props.numTask}
             />
           ))}
         </tbody>

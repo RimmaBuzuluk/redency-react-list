@@ -33,6 +33,7 @@ function App(props) {
         posts={props.state.posts}
         deleteItem={props.deleteItem}
         ArhivItem={props.ArhivItem}
+        numTask={props.numTask}
       />
       <Input_items
         newNameFun={newName}

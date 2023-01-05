@@ -13,7 +13,7 @@ function List_item(props) {
       <th className="data">{props.post.dates}</th>
       <th className="main__img">
         <BArhiv ArhivItem={props.ArhivItem} />
-        <BDelete deleteItem={props.deleteItem} />
+        <BDelete deleteItem={props.deleteItem} numTask={props.numTask} />
         <BRename />
       </th>
     </tr>
