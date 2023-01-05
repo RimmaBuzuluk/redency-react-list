@@ -4,6 +4,7 @@ import ArhiveTable from "./arhivTable";
 import Input_items from "./inputItems";
 
 import List from "./list";
+import TableNum from "./tableNum";
 
 function App(props) {
   let newName = React.createRef();
@@ -44,6 +45,7 @@ function App(props) {
         New
       </button>
       <ArhiveTable arhive={props.state.arhive} backItem={props.backItem} />
+      <TableNum NumTable={props.state.NumTable} />
     </div>
   );
 }

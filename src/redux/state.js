@@ -47,6 +47,18 @@ let state = {
       dates: "05.10.2021",
     },
   ],
+  NumTable: [
+    {
+      task: "Task",
+      activ: 2015,
+      arh: "pink",
+    },
+    {
+      task: "Random Task",
+      activ: 2015,
+      arh: "pink",
+    },
+  ],
 };
 
 export let newItem = (
@@ -154,5 +166,10 @@ export let backItem = (e) => {
   deleteArhiv(e);
   rerenderEntireTree(state);
 };
+
+// export let numTask = () => {
+//   let mainItem = state.posts.length;
+//   return mainItem;
+// };
 
 export default state;
