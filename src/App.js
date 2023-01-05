@@ -43,7 +43,7 @@ function App(props) {
       <button onClick={NewItemText} className="button_create">
         New
       </button>
-      <ArhiveTable arhive={props.state.arhive} />
+      <ArhiveTable arhive={props.state.arhive} backItem={props.backItem} />
     </div>
   );
 }

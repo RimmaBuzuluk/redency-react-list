@@ -7,6 +7,7 @@ import Button_ from "./button_dalete";
 import { deleteItem } from "./redux/state";
 import { ArhivItem } from "./redux/state";
 import { newItem } from "./redux/state";
+import { backItem } from "./redux/state";
 
 // newItem("lflfl");
 export let rerenderEntireTree = (state) => {
@@ -18,6 +19,7 @@ export let rerenderEntireTree = (state) => {
         newItem={newItem}
         deleteItem={deleteItem}
         ArhivItem={ArhivItem}
+        backItem={backItem}
       />
     </React.StrictMode>
   );

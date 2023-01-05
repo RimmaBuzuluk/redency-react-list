@@ -1,13 +1,7 @@
 import "./App.css";
 import BBack from "./bBack";
-// import Button_ from "./button_dalete";
 
 function ArhiveItems(props) {
-  //     deleteItem=id=>{
-  //         this.setState(prevState=>({
-  //             elements:prevState.elements.filter(el=>el.id !=id)
-  //         }))
-  //     }
   return (
     <tr className="new_table">
       <th className="name">{props.arhive.name}</th>
@@ -16,7 +10,7 @@ function ArhiveItems(props) {
       <th className="content">{props.arhive.contest}</th>
       <th className="data">{props.arhive.dates}</th>
       <th className="main__img">
-        <BBack />
+        <BBack backItem={props.backItem} />
       </th>
     </tr>
   );

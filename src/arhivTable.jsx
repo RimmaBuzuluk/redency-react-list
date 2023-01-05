@@ -22,7 +22,7 @@ function ArhiveTable(props) {
       </thead>
       <tbody id="tbody" className="inform">
         {props.arhive.map((arhive, index) => (
-          <ArhiveItems arhive={arhive} key={index} />
+          <ArhiveItems arhive={arhive} key={index} backItem={props.backItem} />
         ))}
       </tbody>
     </table>
