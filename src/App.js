@@ -34,6 +34,7 @@ function App(props) {
         deleteItem={props.deleteItem}
         ArhivItem={props.ArhivItem}
         numTask={props.numTask}
+        RenemaItem={props.RenemaItem}
       />
       <Input_items
         newNameFun={newName}

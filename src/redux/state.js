@@ -66,7 +66,7 @@ export let numTask = () => {
   state.NumTable[0].arhiveN = 0;
   for (let i = 0; i < state.posts.length; i++) {
     let contest = state.posts[i].contest;
-    if (contest == "Task") {
+    if (contest === "Task") {
       state.NumTable[0].activN += 1;
     }
   }
@@ -74,11 +74,13 @@ export let numTask = () => {
 
   for (let j = 0; j < state.arhive.length; j++) {
     let contestArh = state.arhive[j].contest;
-    if (contestArh == "Task") {
+    if (contestArh === "Task") {
       state.NumTable[0].arhiveN += 1;
     }
   }
   state.NumTable[1].arhiveN = state.arhive.length - state.NumTable[0].arhiveN;
+
+  console.log(state.NumTable[1].activN);
 };
 
 export let newItem = (
@@ -99,13 +101,51 @@ export let newItem = (
   rerenderEntireTree(state);
 };
 
+// export let deleteItem = (e) => {
+//   // const id = e.currentTarget.dataset.myId
+//   //   const новый_массив =  массив_без_удаленного_элемента (подсказка, удалять можно через фильтрацию по айди)
+//   //   this.setState({ users: новый_массив })
+
+//   const currentButtonDel = e.currentTarget;
+//   const div_elem = currentButtonDel.closest(".new_table");
+//   const string_index = div_elem.rowIndex;
+//   console.log(string_index);
+//   // const newArr = [];
+//   // // console.log(newArr);
+//   // for (let i = 0; i <= state.posts.length - 1; i++) {
+//   //   if (i != string_index - 1) {
+//   //     newArr.push(state.posts[i]);
+//   //     console.log(state.posts[i]);
+//   //     console.log("newARR", newArr);
+//   //   }
+//   // }
+//   // console.log("newARR", newArr);
+//   // // state.posts = [];
+//   // state.posts = newArr;
+//   // console.log("posts", state.posts);
+
+//   // rerenderEntireTree();
+
+//   state.posts.splice(string_index - 1, 1);
+//   currentButtonDel.closest(".new_table").remove();
+//   console.log(state.posts);
+//   // rerenderEntireTree();
+// };
+
 export let deleteItem = (e) => {
   const currentButtonDel = e.currentTarget;
   const div_elem = currentButtonDel.closest(".new_table");
   const string_index = div_elem.rowIndex;
+  console.log(string_index);
+  // const NewPosts = state.posts.filter(
+  //   (value, index) => index !== string_index - 1
+  // );
+  // console.log(NewPosts);
+  // state.posts = NewPosts;
+  // console.log(state.posts);
   state.posts.splice(string_index - 1, 1);
   currentButtonDel.closest(".new_table").remove();
-  console.log(state.posts);
+  rerenderEntireTree(state);
 };
 
 export let ArhivItem = (e) => {
@@ -185,6 +225,63 @@ export let backItem = (e) => {
 
   state.posts.push(MainTableItemArhiv);
   deleteArhiv(e);
+  rerenderEntireTree(state);
+};
+
+export let RenemaItem = (e) => {
+  const currentButtonChange = e.currentTarget;
+  //видылити з тега объект
+  const change_elem = currentButtonChange.closest(".new_table");
+  // console.log(change_elem);
+
+  const string_index = change_elem.rowIndex; //индекс выбраной строки
+  console.log("index", string_index);
+  // console.log(state.posts[string_index - 1]);
+  let colorStyle = change_elem.style.color;
+  if (colorStyle === "black") {
+    console.log("black");
+    console.log("post index", state.posts[string_index - 1]);
+    change_elem.style.color = " ";
+    change_elem.style.color = "gray";
+    change_elem.setAttribute("contenteditable", true);
+    change_elem.style.border = "2px solid black";
+    change_elem.style.background = "#F8F8F8";
+    // rerenderEntireTree(state);
+
+    state.posts[string_index - 1].name =
+      document.getElementsByClassName("name")[string_index - 1].innerHTML;
+
+    console.log("name", state.posts[string_index - 1].name);
+
+    state.posts[string_index - 1].created =
+      document.getElementsByClassName("created")[string_index - 1].innerHTML;
+
+    console.log("created", state.posts[string_index - 1].created);
+
+    state.posts[string_index - 1].categor =
+      document.getElementsByClassName("category")[string_index - 1].innerHTML;
+
+    console.log("categor", state.posts[string_index - 1].categor);
+
+    state.posts[string_index - 1].contest =
+      document.getElementsByClassName("content")[string_index - 1].innerHTML;
+
+    console.log("contest", state.posts[string_index - 1].contest);
+
+    state.posts[string_index - 1].data =
+      document.getElementsByClassName("data")[string_index - 1].innerHTML;
+
+    console.log("data", state.posts[string_index - 1].data);
+  } else {
+    // console.log("gray");
+    change_elem.removeAttribute("contenteditable");
+    change_elem.style.color = " ";
+    change_elem.style.color = "black";
+    change_elem.style.border = "none";
+    change_elem.style.background = "none";
+
+    // console.log("post", state.posts[string_index - 1]);
+  }
   rerenderEntireTree(state);
 };
 

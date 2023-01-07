@@ -35,6 +35,7 @@ function List(props) {
               deleteItem={props.deleteItem}
               ArhivItem={props.ArhivItem}
               numTask={props.numTask}
+              RenemaItem={props.RenemaItem}
             />
           ))}
         </tbody>
